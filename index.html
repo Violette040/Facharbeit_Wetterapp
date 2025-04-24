@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wetterkleidung App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Overlay für Drawer -->
+  <div id="overlay" class="overlay"></div>
+
+  <!-- Drawer-Menü -->
+<nav id="drawer" class="drawer">
+  <h2>Menü</h2>
+
+  <div class="drawer-toggle">
+    <span>Geschlecht:</span>
+    <div class="toggle-wrapper">
+      <label class="toggle-option">
+        <input type="radio" name="gender" value="m" checked />
+        Männlich
+      </label>
+      <label class="toggle-option">
+        <input type="radio" name="gender" value="w" />
+        Weiblich
+      </label>
+    </div>
+  </div>
+
+  <a href="about.html" class="drawer-button">Über Mich</a>
+</nav>
+
+  <!-- Städte-Menü -->
+  <div id="city-menu" class="city-menu">
+    <button class="city-option" data-city="Hamburg">Hamburg</button>
+    <button class="city-option" data-city="Berlin">Berlin</button>
+    <button class="city-option" data-city="München">München</button>
+    <button class="city-option" data-city="Köln">Köln</button>
+    <button class="city-option" data-city="Leipzig">Leipzig</button>
+    <button class="city-option" data-city="Frankfurt am Main">Frankfurt</button>
+    <button class="city-option" data-city="Düsseldorf">Düsseldorf</button>
+    <button class="city-option" data-city="Stuttgart">Stuttgart</button>
+    <button class="city-option" data-city="Bremen">Bremen</button>
+    <button class="city-option" data-city="Nürnberg">Nürnberg</button>
+    <button class="city-option" data-city="Dresden">Dresden</button>
+    <button class="city-option" data-city="Hannover">Hannover</button>
+  </div>
+
+  <!-- Seiten Wrapper: Heute & Morgen -->
+  <div class="pages-wrapper" id="pages-wrapper">
+
+    <!-- 🔵 Heute -->
+    <main id="main-content" class="main-content page">
+      <div class="weather-field">
+        <div id="weather-icon"></div>
+        <h2 id="city-name">Hamburg</h2>
+        <p id="temperature">-- °C</p>
+        <p id="description">Wetterbeschreibung</p>
+      </div>
+
+      <!-- Figur für Heute -->
+      <div id="figure" class="figure"></div>
+
+      <div class="button-row">
+        <div class="button-wrapper">
+          <button id="city-button" class="action-button">Ort</button>
+        </div>
+      </div>
+
+      <div class="clothing-section" id="clothing-section"></div>
+    </main>
+
+    <!-- 🟡 Morgen -->
+    <main id="main-content-tomorrow" class="main-content page">
+      <div class="weather-field">
+        <div id="weather-icon-tomorrow"></div>
+        <h2 id="city-name-tomorrow">Hamburg (morgen)</h2>
+        <p id="temperature-tomorrow">-- °C</p>
+        <p id="description-tomorrow">Wetterbeschreibung</p>
+      </div>
+
+      <!-- Figur für Morgen -->
+      <div id="figure-tomorrow" class="figure"></div>
+
+      <div class="button-row">
+        <div class="button-wrapper">
+          <button id="city-button-tomorrow" class="action-button">Ort</button>
+        </div>
+      </div>
+
+      <div class="clothing-section" id="clothing-section-tomorrow"></div>
+    </main>
+
+  </div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
